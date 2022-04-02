@@ -6,7 +6,6 @@ import { BlogContext } from '../../App';
 const Home = () => {
     // const [blogs, setBlogs] = useState([]);
     const [blogs, setBlogs] = useContext(BlogContext);
-    console.log(blogs)
     useEffect(() => {
         fetch('data.json')
         .then(res => res.json())

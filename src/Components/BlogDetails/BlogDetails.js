@@ -16,10 +16,10 @@ const BlogDetails = () => {
             <div className='p-5'>
                 <button className='text-white flex items-center hover:text-sky-300' onClick={() => navigate(-1)}><AiOutlineDoubleLeft />Back</button>
             </div>
-            <div className='flex justify-center'>
+            <div className='flex justify-center sm: p-5'>
                 <img className='p-1 rounded-md border-2 bg-white' src={blog?.imageURL} alt="" />
             </div>
-            <div className='container mx-auto'>
+            <div className='container mx-auto p-5'>
                 <h2 className='text-3xl font-bold text-center mt-4 mb-4'>{blog?.title}</h2>
                 <p className='leading-8'>{blog?.blog}</p>
             </div>
