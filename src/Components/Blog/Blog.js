@@ -19,7 +19,7 @@ const Blog = ({ blog }) => {
                         <small className='mt-1 ml-2 italic text-sky-700'>Author</small>
                     </div>
                 </div>
-                <p className='text-xl'>
+                <p className='leading-8'>
                     {blogBody.length < 350 ? blogBody : blogBody.slice(0, 350)}
                     <span className='text-sky-400 cursor-pointer hover:text-sky-700' onClick={() => navigate(`/blog/${_id}`)}>...Read More</span>
                 </p>
