@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+    const {pathname} = useLocation();
     return (
-        <nav className='flex justify-between items-center shadow-md p-4'>
+        <nav style={pathname.includes("blog") ? {display: 'none'} : {display: 'flex'}} className='flex justify-between items-center shadow-md p-4'>
             <div>
                 <img className='w-40 h-10' src="https://s3images.coroflot.com/user_files/individual_files/large_677882_ewz3wdcc9ao7eu5f4dlszexu_.png" alt="" />
             </div>

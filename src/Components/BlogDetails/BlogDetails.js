@@ -12,7 +12,6 @@ const BlogDetails = () => {
         <> 
         <div className='header-gradient' />
             <div>
-                <h2>This is Blog Details page</h2>
                 <div>
                     <img src={blog?.imageURL} alt="" />
                     <h2 className='text-3xl'>{blog?.title}</h2>
