@@ -1,19 +1,24 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BlogContext } from '../../App';
 import './BlogDetails.css';
+import { AiOutlineDoubleLeft } from 'react-icons/ai';
 
 const BlogDetails = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [blogs, setBlogs] = useContext(BlogContext);
 
     const blog = blogs.find(blog => blog._id === id)
     return (
-        <> 
-        <div className='header-gradient' />
+        <>
+            <div className='header-gradient' />
+            <div className='p-5'>
+                <button className='text-white flex items-center' onClick={() => navigate(-1)}><AiOutlineDoubleLeft/>Back</button>
+            </div>
             <div>
-                <div>
-                    <img src={blog?.imageURL} alt="" />
+                <div className='text-center'>
+                    <img className='text-center' src={blog?.imageURL} alt="" />
                     <h2 className='text-3xl'>{blog?.title}</h2>
                     <p>{blog?.blog}</p>
                 </div>
