@@ -14,6 +14,7 @@ const Blog = ({ blog }) => {
                     <div className='flex'>
                         <img src={Indicator} alt="" />
                         <p className='ml-2'>{admin}</p>
+                        <small className='mt-1 ml-2 italic text-sky-700'>Author</small>
                     </div>
                 </div>
                 <p className='text-xl'>
