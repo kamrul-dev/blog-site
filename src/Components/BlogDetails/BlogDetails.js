@@ -14,7 +14,7 @@ const BlogDetails = () => {
         <>
             <div className='header-gradient' />
             <div className='p-5'>
-                <button className='text-white flex items-center' onClick={() => navigate(-1)}><AiOutlineDoubleLeft/>Back</button>
+                <button className='text-white flex items-center hover:text-sky-300' onClick={() => navigate(-1)}><AiOutlineDoubleLeft />Back</button>
             </div>
             <div>
                 <div className='text-center'>
