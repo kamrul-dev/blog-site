@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
     const {pathname} = useLocation();
     return (
-        <nav style={pathname.includes("blog") ? {display: 'none'} : {display: 'flex'}} className='flex justify-between items-center shadow-md p-4'>
+        <nav style={pathname.includes("blog") ? {display: 'none'} : {display: 'flex'}} className='flex justify-between items-center shadow-md p-4 h-20 w-full bg-white'>
             <div>
                 <img className='w-40 h-10' src="https://s3images.coroflot.com/user_files/individual_files/large_677882_ewz3wdcc9ao7eu5f4dlszexu_.png" alt="" />
             </div>

@@ -13,7 +13,7 @@ const Home = () => {
         .then(data => setBlogs(data));
     }, []);
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mt-10'>
             {
                 blogs.map(blog => <Blog
                     key={blog._id}
