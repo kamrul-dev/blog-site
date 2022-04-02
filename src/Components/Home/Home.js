@@ -1,10 +1,23 @@
-import React from 'react';
-import './Home.css'
+import React, { useEffect, useState } from 'react';
+import './Home.css';
+import Blog from '../Blog/Blog';
 
 const Home = () => {
+    const [blogs, setBlogs] = useState([]);
+    console.log(blogs)
+    useEffect(() => {
+        fetch('data.json')
+        .then(res => res.json())
+        .then(data => setBlogs(data));
+    }, []);
     return (
-        <div>
-            <h2>This is Home</h2>
+        <div className='container mx-auto'>
+            {
+                blogs.map(blog => <Blog
+                    key={blog._id}
+                    blog={blog}
+                ></Blog>)
+            }
         </div>
     );
 };
