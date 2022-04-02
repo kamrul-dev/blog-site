@@ -17,10 +17,14 @@ const BlogDetails = () => {
                 <button className='text-white flex items-center hover:text-sky-300' onClick={() => navigate(-1)}><AiOutlineDoubleLeft />Back</button>
             </div>
             <div>
-                <div className='text-center'>
-                    <img className='text-center' src={blog?.imageURL} alt="" />
-                    <h2 className='text-3xl'>{blog?.title}</h2>
-                    <p>{blog?.blog}</p>
+                <div className=''>
+                    <div className='flex justify-center'>
+                        <img className='p-1 rounded-md border-2 bg-white' src={blog?.imageURL} alt="" />
+                    </div>
+                    <div  className='container mx-auto'>
+                        <h2 className='text-3xl font-bold text-center mt-4 mb-4'>{blog?.title}</h2>
+                        <p className='leading-8'>{blog?.blog}</p>
+                    </div>
                 </div>
             </div>
         </>
